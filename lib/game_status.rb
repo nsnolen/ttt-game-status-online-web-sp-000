@@ -19,6 +19,7 @@ end
 
 
 def won?(board)
+<<<<<<< HEAD
   WIN_COMBINATIONS.detect do |win|
     board[win[0]] == board[win[1]] && board[win[2]] == board[win[0]] && position_taken?(board, win[0])
   end
@@ -27,11 +28,15 @@ end
 def full?(board)
   board.all? do |index|
     if index == "X" || index == "O"
+=======
+  if WIN_COMBINATIONS.any?{|win|}
+>>>>>>> df45ba7ff9a5cb1bc800a51d430823efcd23625f
     true
   else
     false
   end
 end
+<<<<<<< HEAD
 end
 
 def draw?(board)
@@ -55,3 +60,5 @@ end
 #     puts "#{board[win[0]]}"
 #   end
 # end
+=======
+>>>>>>> df45ba7ff9a5cb1bc800a51d430823efcd23625f
